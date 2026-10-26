@@ -20,6 +20,8 @@ header{
     background-color: hsl(0, 0%, 90%);
     padding: 10px;
     height: 50px;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
 }
 #logo{
     height: 100%;
@@ -49,10 +51,47 @@ header{
 .navbar a:hover{
     background-color: hsl(0, 0%, 50%);
 }
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+}
+.opennavbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75px;
+    height: 70px;
+    background-color: hsl(0, 0%, 60%);
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+}
 .top{
     background-color: hsl(0, 0%, 95%);
     margin-left: 75px;
     padding: 0px;
+}
+@media screen and (max-width:700px){
+    .opennavbar {
+        display: block;
+        box-sizing: border-box;
+        z-index: 11;
+    }
+    .navbar ul {
+        box-sizing: border-box;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease;
+    }
+    .nav-toggle:checked ~ .navbar ul {
+        transform: translateX(0);
+    }
+    .top {
+        margin-left: 0;
+    }
 }
 .section1{
     display: flex;
@@ -102,7 +141,7 @@ header{
     text-decoration: none;
     color: hsl(0, 0%, 25%);
 }
-.firstimg {
+.firstimg{
     position: absolute;
     inset: 0;
     width: 100%;
@@ -124,8 +163,9 @@ header{
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 50px;
     z-index: 2;
+    text-align: center;
 }
 .gallery{
     display: inline-flex;
@@ -151,8 +191,8 @@ header{
     text-align: center;
 }
 .gallery:hover{
-    border: 2px solid hsl(0, 98%, 51%);
-    transform: scale(0.875);
+    border: 2px solid hsl(0, 100%, 50%);
+    transform: scale(0.9);
     transform-origin: center;
     transform-style: flat;
     transition:transform 0.5 ease-in-out ;
@@ -162,4 +202,73 @@ header{
     height: 100%;
     display: block;
     object-fit: cover;
+}
+.section3{
+    background-color: hsl(0, 0%, 70%);
+    display: flex;
+    min-height: 250px;
+    position: sticky;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    z-index: 1;
+    justify-content: center;
+    align-items: stretch;
+}
+.section3 > div:last-child{
+    position: relative;
+    flex: 1;
+    min-width: 0;
+}
+.profilepic{
+    position: flex;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+.moreintro{
+    width: 40%;
+    margin-right: 10%;
+    height: auto;
+    align-self: center;
+}
+.section4{
+    background-color: hsl(0, 0%, 60%);
+    scroll-margin-top: 80px;
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    z-index: 2;
+}
+.section4 h1{
+    text-align: center;
+}
+.skill{
+    background-color: hsl(0, 0%, 50%);
+    width: 30%;
+    height: 100%;
+    margin: 1%;
+    min-width: 100px;
+    display: inline-block;
+    flex-direction: column;
+    vertical-align: top;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.theskill{
+    text-align: center;
+}
+.skill ul{
+    list-style-position: inside;
+    padding-left: 0;
+    text-align: center;
+    list-style-type: decimal;
 }
