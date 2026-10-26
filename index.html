@@ -9,21 +9,26 @@
 </head>
 <body>
     <header>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="opennavbar" aria-label="Buka atau tutup menu">☰</label>
+
         <nav class="navbar">
             <ul>
-                <li><a href="#Arts">Arts</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Skills</a></li>
+                <li><a href="#arts">Arts</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
         </nav>
+
         
         <div class="profile">
-            <img src="Image/Icon.PNG" alt="logo" id="logo">
-            <h1 id="brand">UFFU ART</h1>
+            <a href="#top" class="profile">
+                <img src="Image/Icon.PNG" alt="logo" id="logo">
+                <h1 id="brand">UFFU ART</h1>
+            </a>
         </div>
     </header>
-
     <main id="top" class="top">
         <section class="section1">
             <div class="intro">
@@ -31,7 +36,7 @@
                 <h1>Naufal Nafis Firdaus</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tenetur nisi ut asperiores at rem eum eveniet incidunt officiis? A inventore ratione accusantium officiis aliquam expedita totam earum assumenda necessitatibus!</p>
                 <div class="button">
-                    <a href="#Arts" class="viewarts">
+                    <a href="#arts" class="viewarts">
                         View Arts
                     </a>
                 </div>
@@ -46,7 +51,7 @@
             </div>
         </section>
 
-        <section id="Arts" class="section2">
+        <section id="arts" class="section2">
             <h1>Arts Gallery</h1>
             <div class="gallery">
                 <a href="Image/MyArt/Cecilia.JPG">
@@ -84,6 +89,44 @@
                     <img src="Image/MyArt/Kunti.png" alt="Art 1">
                 </a>
                 <div class="description">Kunti</div>
+            </div>
+        </section>
+
+        <section id="about" class="section3">
+            <div class="moreintro">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, id maiores dicta architecto et provident blanditiis cumque vero, perspiciatis harum itaque enim aliquid obcaecati, asperiores iure neque quo temporibus laudantium?</p>
+            </div>
+            <div>
+                <img src="Image/Profile.jpg" alt="Naufal Nafis picture" class="profilepic">
+            </div>
+        </section>
+
+        <section id="skills" class="section4">
+            <h1>My Skills</h1>
+            <div class="skill">
+                <h3 class="theskill">Skill 1</h3>
+                <ul>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3 class="theskill">Skill 2</h3>
+                <ul>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h3 class="theskill">Skill 3</h3>
+                <ul>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                    <li>subskill</li>
+                </ul>
             </div>
         </section>
     </main>
